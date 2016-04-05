@@ -1,0 +1,16 @@
+<div class="header-wrap">
+  <header-item ng-repeat="item in $ctrl.items" data="item"></header-item>
+
+  <script type="text/ng-template" id="header-countries">
+    <ul>
+      <li ng-repeat="country in $ctrl.parent.countries">
+        {{country.title}}
+      </li>
+    </ul>
+  </script>
+
+  <script type="text/ng-template" id="header-cat">
+    <div>Описание котейки</div>
+  </script>
+
+</div>

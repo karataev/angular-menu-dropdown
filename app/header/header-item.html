@@ -1,0 +1,23 @@
+
+<div class="header-item"
+     ng-class="{'is-active': $ctrl.data.isActive}"
+>
+  <div class="header-item-clickable"
+       ng-click="$ctrl.clickHandler()"
+       ng-class="{'is-link': $ctrl.data.link}"
+  >
+    <div class="header-item-title" ng-if="$ctrl.data.title">
+      {{$ctrl.data.title}}
+    </div>
+    <div class="header-item-img"
+         ng-if="$ctrl.data.img"
+         ng-style="{'background-image': 'url(' + $ctrl.data.img+ ')'}"
+    ></div>
+  </div>
+
+  <div ng-include="$ctrl.data.content"
+       class="header-item-content"
+       ng-if="$ctrl.data.content && $ctrl.data.isActive"
+  ></div>
+
+</div>
